@@ -1,0 +1,11 @@
+html, body, #output, #table {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#input_message, #submit_message {
+	width: 100%;
+	height: 100%;
+}

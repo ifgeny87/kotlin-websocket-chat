@@ -1,0 +1,48 @@
+group 'games.dev87.ru'
+version '0.0.0-SNAPSHOT'
+
+buildscript {
+	ext.kotlin_version = '1.1.3'
+
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+	}
+}
+
+apply plugin: 'kotlin'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+
+	// logging
+	compile 'org.slf4j:slf4j-api:1.7.21'
+//    compile 'org.slf4j:slf4j-simple:1.7.21'
+	compile 'org.slf4j:slf4j-log4j12:1.7.21'
+	compile 'log4j:log4j:1.2.17'
+
+	// https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-continuation
+	compile group: 'org.eclipse.jetty', name: 'jetty-continuation', version: '8.2.0.v20160908'
+
+	// https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-http
+	compile group: 'org.eclipse.jetty', name: 'jetty-http', version: '8.2.0.v20160908'
+
+	// https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-io
+	compile group: 'org.eclipse.jetty', name: 'jetty-io', version: '8.2.0.v20160908'
+
+	// https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server
+	compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '8.2.0.v20160908'
+
+	// https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-util
+	compile group: 'org.eclipse.jetty', name: 'jetty-util', version: '8.2.0.v20160908'
+
+	// https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-websocket
+	compile group: 'org.eclipse.jetty', name: 'jetty-websocket', version: '8.2.0.v20160908'
+
+}
