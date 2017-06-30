@@ -22,5 +22,10 @@
 hs_err_pid*
 
 # IDEA projects & Gradle temp files
+.idea/
+.gradle/
 *.iml
 *.ipr
+
+# Build
+build/
