@@ -1,14 +1,13 @@
 package ru.dev87.games.websocketchat.server.app
 
 import org.eclipse.jetty.server.Server
-import org.eclipse.jetty.server.handler.DefaultHandler
 import ru.dev87.games.websocketchat.server.handler.RoomHandler
 
-fun main(args: Array<String>) {
-	val roomHandler = RoomHandler()
-	roomHandler.handler = DefaultHandler()
+// порт сервера
+val SERVER_PORT = 3333
 
-	val jettyServer = Server(3333)
-	jettyServer.handler = roomHandler
+fun main(args: Array<String>) {
+	val jettyServer = Server(SERVER_PORT)
+	jettyServer.handler = RoomHandler()
 	jettyServer.start()
 }

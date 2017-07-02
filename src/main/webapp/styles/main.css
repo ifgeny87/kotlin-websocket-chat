@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Jura');
+
+html, body, #content {
+	width   : 100%;
+	height  : 100%;
+	padding : 0;
+	margin  : 0;
+}
+
+#content {
+	border-spacing : 0;
+}
+
+/* Для того чтобы растянуть div по высоте внутри td без переполнения */
+#content {
+	table-layout : fixed;
+}
+
+#content tbody, #content tr {
+	padding : 0;
+	margin  : 0;
+}
+
+#output {
+	overflow-y : scroll;
+}
+
+#output, #input input, button {
+	font-family : 'Jura', sans-serif;
+	font-size   : 14pt;
+}
+
+#output {
+	height    : 100%;
+	margin    : 0;
+	padding   : 10px;
+	font-size : 14pt;
+}
+
+#output .date {
+	font-size : 10pt;
+}
+
+#output .message .username {
+	font-weight : bold;
+}
+
+#output .message .username.me {
+	font-weight : bold;
+	color       : dodgerblue;
+}
+
+#output .message .text {
+	font-family : 'Bad Script', cursive;
+}
+
+#output .notice {
+	color : gray;
+}
+
+#output .error {
+	color : red;
+}
+
+#input {
+	width   : 100%;
+	height  : 60px;
+	padding : 5px;
+}
+
+#input_message, #submit_message {
+	width  : 100%;
+	height : 100%;
+}

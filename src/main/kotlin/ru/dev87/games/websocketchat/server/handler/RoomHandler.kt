@@ -14,8 +14,11 @@ class RoomHandler : WebSocketHandler() {
 
 	val webSockets = CopyOnWriteArraySet<RoomSocket>()
 
+	/**
+	 * Обработчик нового подключения
+	 */
 	override fun doWebSocketConnect(request: HttpServletRequest?, protocol: String?): WebSocket {
-		log.info("Ктото подключился: ${request}")
+		log.info("Кто-то подключился: ${request}")
 		return RoomSocket(webSockets)
 	}
 
