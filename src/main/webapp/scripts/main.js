@@ -24,7 +24,7 @@ const ChatController = {
 		this.inputBox = document.getElementById('input_message');
 
 		this.inputBox.onkeypress = e => {
-			if (e.keyCode == 13) this.onSendMessage.call(this)
+			if (e.keyCode === 13) this.onSendMessage.call(this)
 		};
 
 		document.getElementById('submit_message').onclick = this.onSendMessage.bind(this);
@@ -40,7 +40,7 @@ const ChatController = {
 	onSendMessage: function () {
 		// проверяем соединение
 		if (!this.webSocket || this.webSocket.readyState !== WebSocket.OPEN) {
-			this.addNotice('Соединение не установлено. Некуда отпрвлять сообщение.');
+			this.addNotice('Соединение не установлено. Некуда отправлять сообщение.');
 			return;
 		}
 
@@ -71,7 +71,7 @@ const ChatController = {
 
 		// проверяю автора
 		if (!this.username) {
-			this.addNotice('Сначала нужно указать автора. Введите команду "/auth <имя автора>"');
+			this.addNotice('Сначала нужно указать автора. Введите команду "/auth <имя юзера>"');
 			return;
 		}
 
